@@ -1,6 +1,6 @@
 #[cfg(test)]
 mod tests {
-    use crate::url_convert::{encode, decode};
+    use crate::converts::url::{encode, decode};
 
     #[test]
     fn test_encode() {

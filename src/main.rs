@@ -1,9 +1,9 @@
-pub mod url_convert;
+pub mod converts;
 pub mod utils;
 
 pub mod tests;
 
-use crate::url_convert::{encode, decode};
+use crate::converts::url::{encode, decode};
 use crate::utils::io_pipe;
 use clap;
 use clap::{Parser, ValueEnum};
