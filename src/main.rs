@@ -1,10 +1,11 @@
 use clap;
 use std::{io};
-use percent_encoding::{utf8_percent_encode, AsciiSet, CONTROLS, percent_decode_str};
 use clap::{Parser, ValueEnum};
 
+use crate::url_convert::encode::encode;
+use crate::url_convert::decode::decode;
+pub mod url_convert;
 
-const FRAGMENT: &AsciiSet = &CONTROLS.add(b' ').add(b'"').add(b'<').add(b'>').add(b'`');
 
 #[derive(Parser)]
 struct Cli {    
@@ -37,17 +38,6 @@ fn main() {
             }
         }
     };
-}
-
-
-fn encode(input: &str) {
-    let encoded = utf8_percent_encode(input, FRAGMENT).to_string();
-    println!("{}", encoded);
-}
-
-fn decode(input: &str) {
-    let decoded = percent_decode_str(input).decode_utf8().expect("decode error");
-    println!("{}", decoded);
 }
 
 fn io_pipe(f: Box<dyn Fn(&str)>) {
