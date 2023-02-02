@@ -1,5 +1,5 @@
 [package]
-name = "url-convert"
+name = "uc"
 version = "0.1.0"
 edition = "2021"
 authors = ["Kyana <kyana0817@gmail.com>"]
