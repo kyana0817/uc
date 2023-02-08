@@ -9,6 +9,7 @@ use clap;
 use clap::{Parser, ValueEnum};
 
 #[derive(Parser)]
+#[command(author, version, about, long_about = None)]
 pub struct Cli {    
     #[clap(default_value_t = Mode::Encode, value_enum)]
     mode: Mode,

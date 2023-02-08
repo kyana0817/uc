@@ -3,7 +3,7 @@ name = "uc"
 version = "0.1.0"
 edition = "2021"
 authors = ["Kyana <kyana0817@gmail.com>"]
-description = "url-encoding cli tool"
+description = "parcent encode for command-line tool."
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
